@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E&B Glossy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+
+</head>
+
+<body><div id="intro-loader">
+
+    <img src="images/logo.png" alt="E&B Glossy">
+
+    <h2>E&B Glossy</h2>
+
+</div>
+
+  <!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        <img src="images/logo.png"
+             alt="E&B Glossy Logo">
+    </div>
+
+    <div class="nav-right">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+            <li><a href="wishlist.html">❤️ Wishlist</a></li>
+
+        </ul>
+
+        <a href="cart.html"
+           class="cart-nav">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Shine Naturally </h1>
+
+            <p>
+                Discover beauty products made with elegance and love.
+            </p>
+
+            <p class="signature">
+                Made with love 🤍
+            </p>
+
+            <a href="products.html" class="explore-btn">
+                       Explore Collection ✨
+               </a>
+
+        </div>
+
+        <div class="hero-image">
+
+    <a href="products.html">
+
+        <img src="images/allproducts.jpeg">
+
+    </a>
+
+</div>
+
+    </section>
+
+     <section
+      class="featured" id="products">
+    </section>
+
+    <!-- FEATURED -->
+
+    <section class="featured">
+
+        <h2>✨ Best Sellers ✨</h2>
+
+        <div class="products-container">
+
+            <div class="product-card">
+
+    <img
+    src="images/lipbalm.jpeg"
+
+    onclick="openProduct(
+    'Lip Balm',
+    'images/lipbalm.jpeg',
+    '50',
+    'Soft hydration for smooth, healthy lips.'
+    )">
+
+                <h3>Lip Balm</h3>
+
+                <p>Soft & Hydrating</p><div class="product-price">
+        <span class="currency">EGP</span>
+        <span class="amount">50</span>
+    </div>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="images/lipgloss.jpeg">
+
+                <h3>Lip Gloss</h3>
+
+                <p>Glossy Shine</p><div class="product-price">
+        <span class="currency">EGP</span>
+        <span class="amount">80</span>
+    </div>
+
+            </div>
+
+            <div class="product-card">
+
+                <img src="images/bodysplash.jpeg">
+
+                <h3>Body Splash</h3>
+
+                <p>Fresh Fragrance</p><div class="product-price">
+        <span class="currency">EGP</span>
+        <span class="amount">140</span>
+    </div>
+
+            </div>
+
+        </div>
+        <div class="section-btn">
+
+    <a href="products.html" class="hero-btn">
+
+        Shop Best Sellers ✨
+
+    </a>
+
+</div>
+
+    </section>
+
+
+<section class="reviews-page">
+
+    <p class="products-subtitle">
+
+        Real Customer Reviews ✨
+
+    </p>
+
+    <h1 class="page-title">
+
+        What Our Customers Say
+
+    </h1>
+
+
+
+    <!-- REVIEW SLIDER -->
+
+    <div class="reviews-slider">
+
+        <button
+        class="review-arrow"
+        onclick="prevReview()">
+
+            <i class="fa-solid fa-chevron-left"></i>
+
+        </button>
+
+
+        <div class="review-image-box">
+
+            <img
+            id="review-image"
+            src="reviews/review1.jpeg"
+            alt="Customer Review">
+
+        </div>
+
+
+        <button
+        class="review-arrow"
+        onclick="nextReview()">
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+        </button>
+
+    </div><div class="section-btn">
+
+    <a href="products.html" class="hero-btn">
+
+        Join Our Happy Customers 💖✨
+
+    </a>
+
+</div>
+
+</section>
+    <!-- FOOTER -->
+
+    <footer>
+
+    <img src="images/logo.png">
+
+    <p class="footer-love">
+        Made with love ✨ <span class="heart">❤</span>
+    </p>
+
+    <div class="socials">
+
+        <a href="https://www.instagram.com/eb_glossy/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <i class="fab fa-instagram"></i>
+
+        </a>
+
+        <a href="https://www.facebook.com/share/g/1BrcmSiZV8/"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <i class="fab fa-facebook-f"></i>
+
+        </a>
+
+        <a href="https://wa.me/201068909087"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <i class="fab fa-whatsapp"></i>
+
+        </a>
+
+    </div>
+
+    <p class="copyright">
+
+        © 2026 E&B Glossy
+
+    </p>
+
+</footer>
+
+
+
+    <!-- FLOATING WHATSAPP -->
+
+    <a class="whatsapp"
+        href="https://wa.me/201068909087">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </a>
+<script>
+
+
+
+</script><div id="toast">
+
+</div>
+<script src="Script.js"></script>
+</body>
+
+</html>
