@@ -3360,14 +3360,41 @@ nav a{
 /* Liquid Tint Quick View Shades */
 
 .liquidtint-swatches{
-    margin-top: 15px;
-    text-align: center;
+    margin-top:15px;
+    text-align:center;
 }
 
 .liquidtint-swatches img{
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 8px 20px rgba(177, 72, 72, 0.25);
+    width:200%;
+    max-width:800px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(177, 72, 72, 0.719);
+    transition:.3s;
+}
+
+.liquidtint-swatches img:hover{
+    transform:scale(1.02);
+}
+.liquidtint-popup .popup-image{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    width:48%;
+}
+
+.liquidtint-popup #popup-image{
+    width:100%;
+    max-width:400px;
+    height:300px;
+}
+
+.liquidtint-popup .liquidtint-swatches img{
+    width:100%;
+    width:350px;
+    height: 250px;
+}.liquidtint-popup{
+    width:88%;
+    max-width:1150px;
+    max-height:740px;
 }

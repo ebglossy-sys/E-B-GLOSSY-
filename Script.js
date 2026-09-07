@@ -1175,6 +1175,12 @@ if(name === "Lip Kit"){
 else{
     document.querySelector(".popup-box").classList.remove("lipkit-popup");
 }
+if(name === "Liquid Tint"){
+    document.querySelector(".popup-box").classList.add("liquidtint-popup");
+}
+else{
+    document.querySelector(".popup-box").classList.remove("liquidtint-popup");
+}
 
 glossGallery.innerHTML = "";
 if(name.includes("Gloss")){
