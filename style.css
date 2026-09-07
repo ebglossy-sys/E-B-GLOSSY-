@@ -3357,4 +3357,17 @@ nav a{
     }
 
 }
+/* Liquid Tint Quick View Shades */
 
+.liquidtint-swatches{
+    margin-top: 15px;
+    text-align: center;
+}
+
+.liquidtint-swatches img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(177, 72, 72, 0.25);
+}

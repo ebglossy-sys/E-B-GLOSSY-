@@ -1157,12 +1157,17 @@ else{
 
 glossGallery.style.display = "none";
 let lipKitSwatches = document.getElementById("lipkit-swatches");
-
 lipKitSwatches.style.display = "none";
+
+let liquidTintSwatches = document.getElementById("liquidtint-swatches");
+liquidTintSwatches.style.display = "none";
+
 if(name === "Lip Kit"){
-
     lipKitSwatches.style.display = "block";
+}
 
+if(name === "Liquid Tint"){
+    liquidTintSwatches.style.display = "block";
 }
 if(name === "Lip Kit"){
     document.querySelector(".popup-box").classList.add("lipkit-popup");
