@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E&B Glossy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+
+</head>
+
+<body><div id="intro-loader"> 
+    <img src="images/logo.png" alt="E&B Glossy">
+    <h2>E&B Glossy</h2>
+</div>
+<!-- NAVBAR -->
+
+<nav>
+
+    <div class="logo">
+        <img src="images/logo.png"
+             alt="E&B Glossy Logo">
+    </div>
+
+    <div class="nav-right">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+            <li><a href="wishlist.html">❤️ Wishlist</a></li>
+
+        </ul>
+
+        <a href="cart.html"
+           class="cart-nav">
+
+            <i class="fa-solid fa-bag-shopping"></i>
+
+            <span id="cart-count">
+                0
+            </span>
+
+        </a>
+
+    </div>
+
+</nav>
+    <!-- Create Your Box -->
+    <main class="create-box-page">
+
+        <section class="create-box-hero">
+
+            <div class="create-box-image">
+                <!-- هنحط صورة openproductsbox هنا بعدين -->
+                <div class="box-image-placeholder">
+                    <img src="images/productsbox.jpeg"
+                         alt="E&B Glossy Custom Box"
+                         class="open-box-image">
+                </div>
+            </div>
+
+
+            <div class="create-box-content">
+
+                <p class="box-small-title">
+                    E&B GLOSSY EXCLUSIVE
+                </p>
+
+                <h1>
+                    Build Your Perfect Box✨
+                </h1>
+
+                <p class="box-description">
+                    Choose your favorite shades and scents
+                    and create your perfect E&B Glossy box.
+                </p>
+
+                <div class="box-price">
+                    <span class="old-price">
+                        500 EGP
+                    </span>
+
+                    <span class="offer-price">
+                        450 EGP
+                    </span>
+                </div>
+
+                <p class="box-save">
+                    Special Box Offer
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Product Selection -->
+        <section class="box-builder">
+
+            <h2>
+                Choose Your Favorites 💗
+            </h2>
+
+            <p class="box-builder-subtitle">
+                Select your preferred shade or variant for each item.
+            </p>
+
+
+            <!-- Products will be added here -->
+            <div id="box-products">
+
+    <!-- Liquid Tint -->
+    <div class="box-item">
+
+        <div class="box-item-left">
+
+            <img
+                src="images/liquidtint.jpeg"
+                class="box-product-image"
+                id="liquid-tint-box-image"
+                alt="Liquid Tint">
+
+            <div class="box-item-info">
+
+                <h3>Liquid Tint</h3>
+
+                <p>Choose your shade</p>
+
+            </div>
+
+        </div>
+
+        <select
+            class="box-select"
+            id="liquid-tint-select"
+            onchange="updateBox()">
+
+            <option value="">Choose your shade</option>
+            <option value="Cherry">Cherry</option>
+            <option value="Nude">Nude</option>
+            <option value="Pink">Pink</option>
+            <option value="Hot Red">Hot Red</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Lip Gloss -->
+    <div class="box-item">
+
+        <div class="box-item-left">
+
+            <img
+                src="images/lipgloss.jpeg"
+                class="box-product-image"
+                id="lip-gloss-box-image"
+                alt="Lip Gloss">
+
+            <div class="box-item-info">
+
+                <h3>Lip Gloss</h3>
+
+                <p>Choose your shade</p>
+
+            </div>
+
+        </div>
+
+        <select
+            class="box-select"
+            id="lip-gloss-select"
+            onchange="updateBox()">
+
+            <option value="">Choose your shade</option>
+            <option value="Cherry">Cherry</option>
+            <option value="Nude">Nude</option>
+            <option value="Pink">Pink</option>
+            <option value="Hot Red">Hot Red</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Lip Balm -->
+    <div class="box-item">
+
+        <div class="box-item-left">
+
+            <img
+                src="images/lipbalm.jpeg"
+                class="box-product-image"
+                alt="Lip Balm">
+
+            <div class="box-item-info">
+
+                <h3>Lip Balm</h3>
+
+                <p>Included in the box</p>
+
+            </div>
+
+        </div>
+
+        <div class="fixed-item">
+            Included ✓
+        </div>
+
+    </div>
+
+
+    <!-- Eyebrow Gel -->
+    <div class="box-item">
+
+        <div class="box-item-left">
+
+            <img
+                src="images/eyebrow.jpeg"
+                class="box-product-image"
+                alt="Eyebrow Gel">
+
+            <div class="box-item-info">
+
+                <h3>Eyebrow Gel</h3>
+
+                <p>Included in the box</p>
+
+            </div>
+
+        </div>
+
+        <div class="fixed-item">
+            Included ✓
+        </div>
+
+    </div>
+
+
+    <!-- Body Splash -->
+    <div class="box-item">
+
+        <div class="box-item-left">
+
+            <img
+                src="images/bodysplash.jpeg"
+                class="box-product-image"
+                id="body-splash-box-image"
+                alt="Body Splash">
+
+            <div class="box-item-info">
+
+                <h3>Body Splash</h3>
+
+                <p>Choose your fragrance</p>
+
+            </div>
+
+        </div>
+
+        <select
+            class="box-select"
+            id="body-splash-select"
+            onchange="updateBox()">
+
+            <option value="">Choose your fragrance</option>
+            <option value="Musk Vanilla">Musk Vanilla</option>
+            <option value="Sweet Candy">Sweet Candy</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- Lip Scrub -->
+    <div class="box-item">
+
+        <div class="box-item-left">
+
+            <img
+                src="images/lipscrub.jpeg"
+                class="box-product-image"
+                alt="Lip Scrub">
+
+            <div class="box-item-info">
+
+                <h3>Lip Scrub</h3>
+
+                <p>Included in the box</p>
+
+            </div>
+
+        </div>
+
+        <div class="fixed-item">
+            Included ✓
+        </div>
+
+    </div>
+
+</div>
+
+            <!-- Box Summary -->
+            <div class="box-summary">
+
+                <h2>
+                    Your Box 🎁
+                </h2>
+
+                <div id="box-summary-items">
+                    <p>No selections yet.</p>
+                </div>
+
+                <div class="box-total">
+
+                    <span>
+                        Box Price
+                    </span>
+
+                    <strong id="box-total-price">
+                        450 EGP
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="order-box-btn"
+                    class="order-box-btn">
+                    ORDER MY BOX 💗
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

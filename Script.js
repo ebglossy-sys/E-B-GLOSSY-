@@ -1329,4 +1329,143 @@ function selectShade(element){
 
     element.classList.add("active");
 
+}/* ============================= */
+/* CREATE YOUR OWN BOX */
+/* ============================= */
+
+if(document.getElementById("box-products")){
+
+    const boxPrice = 450; // سعر العرض المؤقت
+    const oldBoxPrice = 500; // السعر الأصلي المؤقت
+
+    const boxSelects = document.querySelectorAll(".box-select");
+    const summaryBox = document.getElementById("box-summary-items");
+    const totalPrice = document.getElementById("box-total-price");
+
+    function updateBox(){
+
+    const tint =
+        document.getElementById("liquid-tint-select").value;
+
+    const gloss =
+        document.getElementById("lip-gloss-select").value;
+
+    const splash =
+        document.getElementById("body-splash-select").value;
+
+
+    const summary =
+        document.getElementById("box-summary-items");
+
+
+    summary.innerHTML = `
+
+        <div class="summary-item">
+            <span>Liquid Tint</span>
+            <strong>${tint}</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Lip Gloss</span>
+            <strong>${gloss}</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Lip Balm</span>
+            <strong>Included ✓</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Eyebrow Gel</span>
+            <strong>Included ✓</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Body Splash</span>
+            <strong>${splash}</strong>
+        </div>
+
+        <div class="summary-item">
+            <span>Lip Scrub</span>
+            <strong>Included ✓</strong>
+        </div>
+
+    `;
+
+
+    updateBoxImages();
+
 }
+function updateBoxImages(){
+
+    const tint =
+        document.getElementById("liquid-tint-select").value;
+
+    const gloss =
+        document.getElementById("lip-gloss-select").value;
+
+
+    const tintImage =
+        document.getElementById("liquid-tint-box-image");
+
+    const glossImage =
+        document.getElementById("lip-gloss-box-image");
+
+    const splash =
+        document.getElementById("body-splash-select").value;
+
+
+    
+
+
+    const shadeImages = {
+
+        "Cherry":
+            "images/lipgloscherryswatch.jpeg",
+
+        "Nude":
+            "images/lipglosnudeswatch.jpeg",
+
+        "Pink":
+            "images/lipglosrosepinkswatch.jpeg",
+
+        "Hot Red":
+            "images/lipglosshotredswatch.jpeg"
+
+    
+
+    };
+    const splashImages = {
+
+        "Musk Vanilla":
+            "images/bodysplashmuskvanilla.jpeg",
+        "Sweet Candy":
+            "images/bodysplashsweetcandy.jpeg"
+    };
+
+
+    if(shadeImages[tint]){
+        tintImage.src = shadeImages[tint];
+    }
+
+
+    if(shadeImages[gloss]){
+        glossImage.src = shadeImages[gloss];
+    }
+    if(splashImages[splash]){
+        document.getElementById("body-splash-box-image").src = splashImages[splash];
+    }
+
+}}document.addEventListener("DOMContentLoaded", function(){
+
+    if(
+        document.getElementById("liquid-tint-select") &&
+        document.getElementById("lip-gloss-select") &&
+        document.getElementById("body-splash-select")
+    ){
+
+        updateBox();
+
+    }
+
+});
