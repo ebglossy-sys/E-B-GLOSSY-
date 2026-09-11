@@ -1519,7 +1519,8 @@ function closeBoxPreview(){
 /* BOX PREVIEW */
 /* ============================= */
 
-function openBoxPreview(){
+function openBoxPreview()
+{
 
     const popup =
         document.getElementById("box-preview-popup");
