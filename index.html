@@ -120,15 +120,34 @@
       class="featured" id="products">
     </section>
 <section class="box-section">
-    <img src="images/productsbox.jpeg" alt="E&B Glossy Box">
-
     <div class="box-content">
         <h2>Discover Our Box ✨</h2>
         <p>Everything you need in one beautiful box.</p>
 
-        <a href="createbox.html" class="box-button">
+        <div class="box-card-container">
+    <!-- Price Badge overlay -->
+    <div class="price-badge">
+        <span class="badge-tag">Special Offer ✨</span>
+        <div class="badge-prices">
+            <span class="old-price">500 EGP</span>
+            <strong class="new-price">450 EGP</strong>
+        </div>
+    </div>
+
+</div>
+
+    <img
+    src="images/productsbox.jpeg"
+    alt="E&B Glossy Gift Box"
+    class="home-box-image"
+    onclick="openBoxPreview()"
+>
+
+
+    <a href="createbox.html" class="box-button">
             Create Your Own Box Now! ✨
         </a>
+    
     </div>
 </section>
     <!-- FEATURED -->
@@ -322,6 +341,91 @@
 
 </div>
 <script src="Script.js"></script>
+<!-- BOX PREVIEW POPUP -->
+
+<div id="box-preview-popup" class="box-preview-popup">
+
+    <div class="box-preview-content">
+
+        <button
+            class="box-preview-close"
+            onclick="closeBoxPreview()">
+            ×
+        </button>
+
+
+        <div class="box-preview-image">
+
+            <img
+                src="images/popupproductsbox.jpeg"
+                alt="E&B Glossy Gift Box">
+
+        </div>
+
+
+        <div class="box-preview-info">
+
+            <h2>
+                What's Inside? 🎁
+            </h2>
+
+            <p class="box-preview-subtitle">
+                Your E&B Glossy Gift Box includes:
+            </p>
+
+
+           <div class="box-preview-items">
+
+    <div class="box-preview-item">
+        <span>✨</span>
+        <strong>Liquid Tint</strong>
+    </div>
+
+    <div class="box-preview-item">
+        <span>💗</span>
+        <strong>Lip Gloss</strong>
+    </div>
+
+    <div class="box-preview-item">
+        <span>💄</span>
+        <strong>Lip Balm</strong>
+    </div>
+
+    <div class="box-preview-item">
+        <span>✨</span>
+        <strong>Eyebrow Gel</strong>
+    </div>
+
+    <div class="box-preview-item">
+        <span>🌸</span>
+        <strong>Body Splash</strong>
+    </div>
+
+    <div class="box-preview-item">
+        <span>🧴</span>
+        <strong>Lip Scrub</strong>
+    </div>
+
+</div>
+
+<a
+    href="createbox.html"
+    class="box-preview-button"
+    style="
+        display:inline-block !important;
+        background:rgb(235, 165, 221) !important;
+        color:white !important;
+        padding:15px 30px !important;
+        margin-top:25px !important;
+    "
+>
+    Create Your Box 🎁
+</a>
+        </div>
+
+    </div>
+
+</div>
 </body>
 
 </html>

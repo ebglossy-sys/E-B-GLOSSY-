@@ -3448,7 +3448,7 @@ nav a{
 }
 
 .box-small-title{
-    font-size: 15px;
+    font-size: 25px;
     letter-spacing: 2px;
     color: #d98aaa;
     font-weight: bold;
@@ -3674,12 +3674,15 @@ nav a{
 
 .open-box-image{
     width: 100%;
-    max-width: 420px;
-    height: 430px;
-    
+    max-width: 429px;
+    height: 440px;
+    cursor: pointer;
     border-radius: 25px;
     display: block;
     margin: 0 auto;
+}
+.open-box-image:hover {
+    transform: scale(1.05);
 }
 
 
@@ -3719,7 +3722,11 @@ nav a{
         max-width: 330px;
         height: 300px;
         object-fit: contain;
+        cursor: pointer;
     }
+    .open-box-image:hover {
+    transform: scale(1.05);
+}
 
     .fixed-item{
         width: 100%;
@@ -3819,12 +3826,14 @@ nav a{
 
 .box-content h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
+    font-size: 80px;
     margin-bottom: 10px;
 }
 
 .box-content p {
-    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    margin-bottom: 30px;
 }
 
 .box-button {
@@ -3832,8 +3841,9 @@ nav a{
     padding: 17px 45px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: large;
+    font-weight: 1000;
+    font-size: 30px;
+    font-family: 'Cormorant Garamond', serif;
     background: linear-gradient(45deg, #f3a6c8, #8dcaf2);
     color: rgb(0, 0, 0);
     transition: 0.3s;
@@ -3841,4 +3851,434 @@ nav a{
 
 .box-button:hover {
     transform: scale(1.05);
+}/* ============================= */
+/* CREATE YOUR OWN BOX HOME */
+/* ============================= */
+
+.create-box-home-image{
+    display: block;
+    cursor: pointer;
+    transition: transform 0.35s ease;
+}
+
+.create-box-home-image img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.create-box-home-image:hover img{
+    transform: scale(1.04);
+    box-shadow:
+        0 5px 35px rgba(216,111,152,0.25);
+}@media(max-width:600px){
+
+    .create-box-home-image:hover img{
+        transform: scale(1.02);
+    }
+
+}/* ============================= */
+/* BOX PREVIEW POPUP */
+/* ============================= */
+
+.box-preview-popup{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background: rgba(25, 15, 20, 0.72);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+
+.box-preview-content{
+    position: relative;
+
+    width: 90%;
+    max-width: 1050px;
+    max-height: 90vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff,
+            #fff5fa
+        );
+
+    border-radius: 30px;
+
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,0.25);
+
+    overflow-y: auto;
+
+    animation: boxPreviewOpen 0.3s ease;
+}
+
+
+@keyframes boxPreviewOpen{
+
+    from{
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+.box-preview-close{
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #fce8f1;
+
+    color: #d86f98;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    z-index: 2;
+}
+
+
+.box-preview-close:hover{
+    transform: rotate(90deg);
+    background: #f7d3e1;
+}
+
+
+.box-preview-image{
+    width: 52%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.box-preview-image img{
+    width: 100%;
+    max-width: 520px;
+
+    max-height: 650px;
+
+    border-radius: 29px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.12);
+}
+
+
+.box-preview-info{
+    width: 42%;
+}
+
+
+.box-preview-info h2{
+    margin: 0 0 10px;
+
+    color: #333;
+
+    font-size: 32px;
+}
+
+
+.box-preview-subtitle{
+    color: #888;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+}
+
+
+.box-preview-items{
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.box-preview-item{
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    background: #fff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.06);
+
+    transition: 0.25s;
+}
+
+
+.box-preview-item:hover{
+    transform: translateX(5px);
+}
+
+
+.box-preview-item span{
+    font-size: 20px;
+}
+
+
+.box-preview-item strong{
+    color: #444;
+
+    font-size: 15px;
+}@media(max-width:600px){
+
+    .box-preview-popup{
+        padding: 15px;
+    }
+
+
+    .box-preview-content{
+        width: 95%;
+        max-height: 92vh;
+
+        padding: 25px 18px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        border-radius: 25px;
+    }
+
+
+    .box-preview-image{
+        width: 100%;
+    }
+
+
+    .box-preview-image img{
+        width: 100%;
+        max-width: 320px;
+        max-height: 360px;
+    }
+
+
+    .box-preview-info{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .box-preview-info h2{
+        font-size: 28px;
+    }
+
+
+    .box-preview-subtitle{
+        font-size: 14px;
+    }
+
+
+    .box-preview-items{
+        text-align: left;
+    }
+
+
+    .box-preview-item{
+        padding: 13px 15px;
+    }
+
+
+    .box-preview-close{
+        top: 10px;
+        right: 10px;
+    }
+
+}   .box-preview-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f6a6c9, #9ed8f5);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.box-preview-button:hover {
+    transform: scale(1.05);
+}.box-preview-button {
+    display: inline-block !important;
+    margin-top: 25px;
+    padding: 12px 28px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f6a6c9, #9ed8f5);
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.box-preview-button:hover {
+    transform: scale(1.05);
+}/* HOME */
+.home-box-image {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* CREATE BOX PAGE */
+.create-box-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}@media (max-width: 600px) {
+
+    .home-box-image {
+        width: 200px;
+    }
+
+    .create-box-image {
+        width: 300px;
+    }
+
+}.price-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.9em;
+}.box-card-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* الشارة المميزة للسعر */
+.price-badge {
+    position: absolute;
+    top: -5px;
+    right: -320px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px); /* تأثير زجاجي فخم */
+    padding: 8px 14px;
+    border-radius: 16px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    border: 3px solid rgba(224, 112, 153, 0.3);
+    z-index: 10;
+    text-align: center;
+    animation: pulse 2s infinite ease-in-out; /* حركة خفيفة لجذب الانتباه */
+}
+
+.badge-tag {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #e07099;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-prices {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.old-price {
+    font-size: 13px;
+    color: #888;
+    text-decoration: line-through;
+}
+
+.new-price {
+    font-size: 16px;
+    color: #d84b7a;
+    font-weight: 800;
+}
+
+/* أنيميشن خفيف يجذب العين */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+    100% { transform: scale(1); }
+}/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 600px) {
+    .price-badge {
+        top: 10px;
+        right: 10px;
+        padding: 6px 10px;
+        border-radius: 12px;
+    }
+
+    .badge-tag {
+        font-size: 11px;
+        letter-spacing: 0.3px;
+        margin-bottom: 1px;
+    }
+
+    .badge-prices {
+        gap: 5px;
+    }
+
+    .old-price {
+        font-size: 11px;
+    }
+
+    .new-price {
+        font-size: 14px;
+    }
 }

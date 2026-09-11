@@ -48,7 +48,8 @@ function updateCartCount(){
 
 /* ================= RENDER CART ================= */
 
-function renderCart(){
+function renderCart()
+{
 
     container.innerHTML = "";
 
@@ -85,24 +86,8 @@ function renderCart(){
         `
         <div class="cart-item">
 
-            ${
-    item.shadeImage
-    ? `
-        <div class="cart-shade">
-
-            <img
-            src="${item.shadeImage}"
-            class="cart-shade-image"
-            alt="${item.shade || ''}">
-
-            <span>
-                ${item.shade || ''}
-            </span>
-
-        </div>
-    `
-    : ""
-}<div class="cart-left">
+       
+<div class="cart-left">
 
                 <img
                 src="${item.image}"
@@ -112,7 +97,24 @@ function renderCart(){
 
                     <h3>${item.name}</h3>
 
+${
+item.shadeImage
+? `
+    <div class="cart-shade">
 
+        <img
+        src="${item.shadeImage}"
+        class="cart-shade-image"
+        alt="${item.shade || 'Selected shade'}">
+
+        <span>
+            ${item.shade || ''}
+        </span>
+
+    </div>
+`
+: ""
+}
 
                     <p>
 
@@ -258,24 +260,43 @@ shadeImage = ""
 
     );
 
-   // Handle Lip Gloss Shades
-// Handle all Lip Gloss products
-if(name.includes("Gloss")){
+   /* ================= HANDLE SHADES ================= */
 
-    let productCard = btn.closest(".product-card");
+if(
+    name.includes("Gloss") ||
+    name === "Liquid Tint"
+){
+
+    let productCard =
+        btn.closest(".product-card");
 
     let activeShade =
         productCard.querySelector(".shade-option.active");
 
     if(activeShade){
 
-    shade = activeShade.dataset.shade;
+        shade =
+            activeShade.dataset.shade;
 
-    shadeImage = activeShade.dataset.image;
+        shadeImage =
+            activeShade.dataset.image;
 
-    name = name + " - " + shade;
+        if(name === "Liquid Tint"){
 
-}
+            name =
+                "Liquid Tint - " +
+                shade;
+
+        }
+        else{
+
+            name =
+                name + " - " +
+                shade;
+
+        }
+
+    }
 
 }
     let existing = cart.find(
@@ -535,10 +556,17 @@ ${customerNotes || "None"}
 
         total += itemTotal;
 
-        text +=
+ text +=
 
 `✨ ${item.name}
 
+${
+item.shade
+? `• Shade: ${item.shade}
+
+`
+: ""
+}
 • Quantity: ${item.quantity}
 
 • Price: ${item.price} EGP
@@ -548,7 +576,6 @@ ${customerNotes || "None"}
 ━━━━━━━━━━━━━━
 
 `;
-
     });
 
 
@@ -1303,19 +1330,13 @@ let selectedShadeImage = "images/lipgloscherryswatch.jpeg";
 
 function selectShade(element){
 
-    let productCard =
-        element.closest(".product-card");
-
-    productCard
-    .querySelectorAll(".shade-option")
-    .forEach(item =>
-        item.classList.remove("active")
-    );
+    document.querySelectorAll(".shade-option").forEach(option=>{
+        option.classList.remove("active");
+    });
 
     element.classList.add("active");
 
     selectedShade = element.dataset.shade;
-
     selectedShadeImage = element.dataset.image;
 
 }function changeGlossShade(name,image,description,element){
@@ -1371,6 +1392,10 @@ if(document.getElementById("box-products")){
         </div>
 
         <div class="summary-item">
+            <span>Body Splash</span>
+            <strong>${splash}</strong>
+        </div>
+        <div class="summary-item">
             <span>Lip Balm</span>
             <strong>Included ✓</strong>
         </div>
@@ -1380,10 +1405,7 @@ if(document.getElementById("box-products")){
             <strong>Included ✓</strong>
         </div>
 
-        <div class="summary-item">
-            <span>Body Splash</span>
-            <strong>${splash}</strong>
-        </div>
+        
 
         <div class="summary-item">
             <span>Lip Scrub</span>
@@ -1468,4 +1490,286 @@ function updateBoxImages(){
 
     }
 
-});
+});/* ============================= */
+/* BOX PREVIEW */
+/* ============================= */
+
+function openBoxPreview(){
+
+    const popup =
+        document.getElementById("box-preview-popup");
+
+    if(popup){
+        popup.style.display = "flex";
+    }
+
+}
+
+
+function closeBoxPreview(){
+
+    const popup =
+        document.getElementById("box-preview-popup");
+
+    if(popup){
+        popup.style.display = "none";
+    }
+
+}/* ============================= */
+/* BOX PREVIEW */
+/* ============================= */
+
+function openBoxPreview(){
+
+    const popup =
+        document.getElementById("box-preview-popup");
+
+    if(popup){
+        popup.style.display = "flex";
+    }
+
+}
+
+
+function closeBoxPreview(){
+
+    const popup =
+        document.getElementById("box-preview-popup");
+
+    if(popup){
+        popup.style.display = "none";
+    }
+
+}/* ============================= */
+/* CREATE YOUR OWN BOX ORDER */
+/* ============================= */
+
+function orderBoxWhatsApp(){
+
+    const tint =
+        document.getElementById("liquid-tint-select").value;
+
+    const gloss =
+        document.getElementById("lip-gloss-select").value;
+
+    const splash =
+        document.getElementById("body-splash-select").value;
+
+
+    if(tint === "" || gloss === "" || splash === ""){
+
+        showMessage(
+            "Please choose your shades & fragrance first ❤️"
+        );
+
+        return;
+
+    }
+
+
+    document.getElementById(
+        "customer-popup"
+    ).style.display = "flex";
+
+}function sendBoxOrderWhatsApp(){
+
+    let customerName =
+        document
+        .getElementById("customer-name")
+        .value
+        .trim();
+
+
+    let customerPhone =
+        document
+        .getElementById("customer-phone")
+        .value
+        .trim();
+
+
+    let customerAddress =
+        document
+        .getElementById("customer-address")
+        .value
+        .trim();
+
+
+    let customerNotes =
+        document
+        .getElementById("customer-notes")
+        .value
+        .trim();
+
+
+    let tint =
+        document
+        .getElementById("liquid-tint-select")
+        .value;
+
+
+    let gloss =
+        document
+        .getElementById("lip-gloss-select")
+        .value;
+
+
+    let splash =
+        document
+        .getElementById("body-splash-select")
+        .value;
+
+
+    /* ================= VALIDATION ================= */
+
+    let errors = [];
+
+
+    /* ================= NAME ================= */
+
+    if(customerName === ""){
+
+        document
+        .getElementById("customer-name")
+        .classList.add("input-error");
+
+        errors.push("Name is required");
+
+    }
+    else if(
+        !/^[A-Za-z\u0600-\u06FF\s]{2,}$/
+        .test(customerName)
+    ){
+
+        document
+        .getElementById("customer-name")
+        .classList.add("input-error");
+
+        errors.push("Name is not valid");
+
+    }
+
+
+    /* ================= PHONE ================= */
+
+    if(customerPhone === ""){
+
+        document
+        .getElementById("customer-phone")
+        .classList.add("input-error");
+
+        errors.push("Phone number is required");
+
+    }
+    else if(
+        !/^01[0125][0-9]{8}$/
+        .test(customerPhone)
+    ){
+
+        document
+        .getElementById("customer-phone")
+        .classList.add("input-error");
+
+        errors.push("Phone number is not valid");
+
+    }
+
+
+    /* ================= ADDRESS ================= */
+
+    if(customerAddress === ""){
+
+        document
+        .getElementById("customer-address")
+        .classList.add("input-error");
+
+        errors.push("Address is required");
+
+    }
+    else if(customerAddress.length < 10){
+
+        document
+        .getElementById("customer-address")
+        .classList.add("input-error");
+
+        errors.push("Address is too short");
+
+    }
+
+
+    /* ================= STOP IF INVALID ================= */
+
+    if(errors.length > 0){
+
+        showMessage(
+            errors.join(" • ") + " ❤️"
+        );
+
+        return;
+
+    }
+
+    /* ================= WHATSAPP MESSAGE ================= */
+
+    let text =
+
+`❤️ Hello E&B Glossy ❤️
+
+━━━━━━━━━━━━━━━━
+
+🎁 CREATE YOUR OWN BOX
+
+✨ Liquid Tint:
+${tint}
+
+💗 Lip Gloss:
+${gloss}
+
+🌸 Body Splash:
+${splash}
+
+💄 Lip Balm:
+Included ✓
+
+✨ Eyebrow Gel:
+Included ✓
+
+🧴 Lip Scrub:
+Included ✓
+
+━━━━━━━━━━━━━━━━
+
+💰 Box Price:
+450 EGP
+
+━━━━━━━━━━━━━━━━
+
+👤 Customer Details
+
+Name:
+${customerName}
+
+📱 Phone:
+${customerPhone}
+
+📍 Address:
+${customerAddress}
+
+📝 Notes:
+${customerNotes || "None"}
+
+━━━━━━━━━━━━━━━━
+
+Thank you 🤍🩷`;
+
+
+    let url =
+        "https://wa.me/201068909087?text="
+        + encodeURIComponent(text);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}

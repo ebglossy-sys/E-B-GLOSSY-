@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,91 +7,107 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>E&B Glossy Products</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>E&B Glossy Products</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+
+
 </head>
 
-<body><div id="intro-loader">
+<body>
 
-    <img src="images/logo.png" alt="E&B Glossy">
+<div id="intro-loader">
 
-    <h2>E&B Glossy</h2>
+
+<img src="images/logo.png" alt="E&B Glossy">
+
+<h2>E&B Glossy</h2>
+
 
 </div>
-   <!-- NAVBAR -->
+
+<!-- NAVBAR -->
 
 <nav>
 
-    <div class="logo">
-        <img src="images/logo.png"
-             alt="E&B Glossy Logo">
-    </div>
 
-    <div class="nav-right">
+<div class="logo">
+    <img src="images/logo.png"
+         alt="E&B Glossy Logo">
+</div>
 
-        <ul>
+<div class="nav-right">
 
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
+    <ul>
 
-            <li>
-                <a href="products.html">
-                    Products
-                </a>
-            </li>
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
 
-            
+        <li>
+            <a href="products.html">
+                Products
+            </a>
+        </li>
 
-            <li>
-                <a href="contact.html">
-                    Contact
-                </a>
-            </li>
-            <li><a href="wishlist.html">❤️ Wishlist</a></li>
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
 
-        </ul>
+        <li>
+            <a href="wishlist.html">
+                ❤️ Wishlist
+            </a>
+        </li>
 
-        <a href="cart.html"
-           class="cart-nav">
+    </ul>
 
-            <i class="fa-solid fa-bag-shopping"></i>
+    <a href="cart.html"
+       class="cart-nav">
 
-            <span id="cart-count">
-                0
-            </span>
+        <i class="fa-solid fa-bag-shopping"></i>
 
-        </a>
+        <span id="cart-count">
+            0
+        </span>
 
-    </div>
+    </a>
+
+</div>
+
 
 </nav>
+
 <section class="products-page">
 
-    <p class="products-subtitle">
-        Elegant Beauty Collection ✨
-    </p>
 
-    <h1 class="page-title">
-        Our Products
-    </h1>
+<p class="products-subtitle">
+    Elegant Beauty Collection ✨
+</p>
 
-    <div class="products-grid">
+<h1 class="page-title">
+    Our Products
+</h1>
 
-    <!-- Lip Balm -->
+<div class="products-grid">
+
+
+<!-- Lip Balm -->
 <div class="product-card">
 
     <img
@@ -104,8 +121,6 @@
     )">
 
     <span class="price-tag">50 EGP</span>
-
-    
 
     <h3>Lip Balm</h3>
 
@@ -133,15 +148,21 @@
 
         Add To Cart 🛒
 
+    </button>
+
     <button
-class="wishlist-btn"
-data-name="Lip Balm"
-onclick="toggleWishlist(
-'Lip Balm',
-'images/lipbalm.jpeg',
-50,
-this
-)"><i class="fa-regular fa-heart"></i>
+        class="wishlist-btn"
+        data-name="Lip Balm"
+        onclick="toggleWishlist(
+        'Lip Balm',
+        'images/lipbalm.jpeg',
+        50,
+        this
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
 
 </div>
 
@@ -149,12 +170,14 @@ this
 <!-- Body Splash -->
 <div class="product-card">
 
-<img src="images/bodysplash.jpeg" onclick="openProduct(
-'Body Splash',
-'images/bodysplash.jpeg',
-'140',
-'Fresh fragrance for a delightful experience.'
-)">
+    <img
+    src="images/bodysplash.jpeg"
+    onclick="openProduct(
+    'Body Splash',
+    'images/bodysplash.jpeg',
+    '140',
+    'Fresh fragrance for a delightful experience.'
+    )">
 
     <span class="price-tag">140 EGP</span>
 
@@ -165,63 +188,70 @@ this
     <div class="product-price">
         <span class="currency">EGP</span>
         <span class="amount">140</span>
-    
-
-</div>
+    </div>
 
     <div class="quantity-box">
+
         <button onclick="decrease(this)">-</button>
+
         <span class="qty">1</span>
+
         <button onclick="increase(this)">+</button>
-    </div><div class="body-variant-select">
+
+    </div>
+
+    <div class="body-variant-select">
+
+        <button
+            class="body-option active"
+            onclick="selectBodyVariant('Musk Vanilla', this)">
+
+            🤍 Musk Vanilla
+
+        </button>
+
+        <button
+            class="body-option"
+            onclick="selectBodyVariant('Sweet Candy', this)">
+
+            🩷 Sweet Candy
+
+        </button>
+
+    </div>
 
     <button
-        class="body-option active"
-        onclick="selectBodyVariant('Musk Vanilla', this)">
-
-        🤍 Musk Vanilla
-
-    </button>
-
-    <button
-        class="body-option"
-        onclick="selectBodyVariant('Sweet Candy', this)">
-
-        🩷 Sweet Candy
-
-    </button>
-
-</div>
-
-    <button
-    class="cart-btn"
-    onclick="addToCart(
-    'Body Splash - ' + bodySplashVariant,
-    'images/bodysplash.jpeg',
-    140,
-    this
-    )">
+        class="cart-btn"
+        onclick="addToCart(
+        'Body Splash - ' + bodySplashVariant,
+        'images/bodysplash.jpeg',
+        140,
+        this
+        )">
 
         Add To Cart 🛒
 
     </button>
+
     <button
-class="wishlist-btn"
-data-name="Body Splash"
-onclick="toggleWishlist(
-    'Body Splash',
-    'images/bodysplash.jpeg',
-    140,
-    this,
-    '',
-    '',
-    bodySplashVariant,
-    bodySplashVariant === 'Musk Vanilla'
-        ? 'images/bodysplashmuskvanilla.jpeg'
-        : 'images/bodysplashsweetcandy.jpeg'
-)">
-<i class="fa-regular fa-heart"></i>
-</button>
+        class="wishlist-btn"
+        data-name="Body Splash"
+        onclick="toggleWishlist(
+        'Body Splash',
+        'images/bodysplash.jpeg',
+        140,
+        this,
+        '',
+        '',
+        bodySplashVariant,
+        bodySplashVariant === 'Musk Vanilla'
+            ? 'images/bodysplashmuskvanilla.jpeg'
+            : 'images/bodysplashsweetcandy.jpeg'
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
 
 </div>
 
@@ -229,13 +259,14 @@ onclick="toggleWishlist(
 <!-- Lip Gloss -->
 <div class="product-card">
 
-    <img src="images/lipgloss.jpeg"
-         onclick="openProduct(
-         'Lip Gloss',
-         'images/lipgloss.jpeg',
-         '80',
-         'Glossy Shine for a Stunning Look.'
-         )">
+    <img
+    src="images/lipgloss.jpeg"
+    onclick="openProduct(
+    'Lip Gloss',
+    'images/lipgloss.jpeg',
+    '80',
+    'Glossy Shine for a Stunning Look.'
+    )">
 
     <span class="price-tag">80 EGP</span>
 
@@ -278,29 +309,34 @@ onclick="toggleWishlist(
             </span>
 
         </div>
+
         <div class="shade-option"
-     data-shade="Pink"
-     data-image="images/lipglosrosepinkswatch.jpeg"
-     onclick="selectShade(this)">
+             data-shade="Pink"
+             data-image="images/lipglosrosepinkswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-color" style="background:#ff82b2;"></span>
-    <span class="shade-name">Pink</span>
+            <span class="shade-color"
+                  style="background:#ff82b2;"></span>
 
-</div>
+            <span class="shade-name">
+                Pink
+            </span>
 
-<div class="shade-option"
-     data-shade="Hot Red"
-     data-image="images/lipglosshotredswatch.jpeg"
-     onclick="selectShade(this)">
+        </div>
 
-    <span class="shade-color"
-          style="background:#d80000;border:1px solid #ccc;"></span>
+        <div class="shade-option"
+             data-shade="Hot Red"
+             data-image="images/lipglosshotredswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-name">Hot Red</span>
+            <span class="shade-color"
+                  style="background:#d80000;border:1px solid #ccc;"></span>
 
-</div>
+            <span class="shade-name">
+                Hot Red
+            </span>
 
-
+        </div>
 
     </div>
 
@@ -319,13 +355,13 @@ onclick="toggleWishlist(
     <button
         class="cart-btn"
         onclick="addToCart(
-    'Lip Gloss',
-    'images/lipgloss.jpeg',
-    80,
-    this,
-    selectedShade,
-    selectedShadeImage
-)">
+        'Lip Gloss',
+        'images/lipgloss.jpeg',
+        80,
+        this,
+        selectedShade,
+        selectedShadeImage
+        )">
 
         Add To Cart 🛒
 
@@ -333,16 +369,16 @@ onclick="toggleWishlist(
 
     <!-- Wishlist -->
     <button
-    class="wishlist-btn"
-    data-name="Lip Gloss"
-    onclick="toggleWishlist(
+        class="wishlist-btn"
+        data-name="Lip Gloss"
+        onclick="toggleWishlist(
         'Lip Gloss',
         'images/lipgloss.jpeg',
         80,
         this,
         selectedShade,
         selectedShadeImage
-    )">
+        )">
 
         <i class="fa-regular fa-heart"></i>
 
@@ -350,20 +386,21 @@ onclick="toggleWishlist(
 
 </div>
 
+
 <!-- Lip Gloss Double Touch Tube -->
 
 <div class="product-card">
 
-<img src="images/lipglossdoubletouchtube.jpeg" onclick="openProduct(
-'Lip Gloss Double Touch Tube',
-'images/lipglossdoubletouchtube.jpeg',
-'120',
-'Beautiful glossy finish with long-lasting shine.'
-)">
+    <img
+    src="images/lipglossdoubletouchtube.jpeg"
+    onclick="openProduct(
+    'Lip Gloss Double Touch Tube',
+    'images/lipglossdoubletouchtube.jpeg',
+    '120',
+    'Beautiful glossy finish with long-lasting shine.'
+    )">
 
     <span class="price-tag">120 EGP</span>
-
-    
 
     <h3>Lip Gloss Double Touch Tube</h3>
 
@@ -373,6 +410,7 @@ onclick="toggleWishlist(
         <span class="currency">EGP</span>
         <span class="amount">120</span>
     </div>
+
     <!-- Shades -->
     <div class="shade-selector">
 
@@ -403,29 +441,34 @@ onclick="toggleWishlist(
             </span>
 
         </div>
+
         <div class="shade-option"
-     data-shade="Pink"
-     data-image="images/lipglosrosepinkswatch.jpeg"
-     onclick="selectShade(this)">
+             data-shade="Pink"
+             data-image="images/lipglosrosepinkswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-color" style="background:#ff82b2;"></span>
-    <span class="shade-name">Pink</span>
+            <span class="shade-color"
+                  style="background:#ff82b2;"></span>
 
-</div>
+            <span class="shade-name">
+                Pink
+            </span>
 
-<div class="shade-option"
-     data-shade="Hot Red"
-     data-image="images/lipglosshotredswatch.jpeg"
-     onclick="selectShade(this)">
+        </div>
 
-    <span class="shade-color"
-          style="background:#d80000;border:1px solid #ccc;"></span>
+        <div class="shade-option"
+             data-shade="Hot Red"
+             data-image="images/lipglosshotredswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-name">Hot Red</span>
+            <span class="shade-color"
+                  style="background:#d80000;border:1px solid #ccc;"></span>
 
-</div>
+            <span class="shade-name">
+                Hot Red
+            </span>
 
-
+        </div>
 
     </div>
 
@@ -442,46 +485,51 @@ onclick="toggleWishlist(
     <button
         class="cart-btn"
         onclick="addToCart(
-    'Lip Gloss Double Touch Tube',
-    'images/lipglossdoubletouchtube.jpeg',
-    120,
-    this,
-    selectedShade,
-    selectedShadeImage
+        'Lip Gloss Double Touch Tube',
+        'images/lipglossdoubletouchtube.jpeg',
+        120,
+        this,
+        selectedShade,
+        selectedShadeImage
         )">
 
         Add To Cart 🛒
 
     </button>
-    <button
-class="wishlist-btn"
-data-name="Lip Gloss Double Touch Tube"
-onclick="toggleWishlist(
-'Lip Gloss Double Touch Tube',
-'images/lipglossdoubletouchtube.jpeg',
-120,
-this,
-selectedShade,
-    selectedShadeImage
-)"><i class="fa-regular fa-heart"></i>
 
-</button>
+    <button
+        class="wishlist-btn"
+        data-name="Lip Gloss Double Touch Tube"
+        onclick="toggleWishlist(
+        'Lip Gloss Double Touch Tube',
+        'images/lipglossdoubletouchtube.jpeg',
+        120,
+        this,
+        selectedShade,
+        selectedShadeImage
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
 
 </div>
+
+
 <!-- Lip Gloss Mini Size -->
 
 <div class="product-card">
 
-<img src="images/lipglossminisize.jpeg" onclick="openProduct(
-'Lip Gloss Mini Size',
-'images/lipglossminisize.jpeg',
-'50',
-'Pocket Size • Everyday Shine ✨'
-)">
+    <img
+    src="images/lipglossminisize.jpeg"
+    onclick="openProduct(
+    'Lip Gloss Mini Size',
+    'images/lipglossminisize.jpeg',
+    '50',
+    'Pocket Size • Everyday Shine ✨'
+    )">
 
     <span class="price-tag">50 EGP</span>
-
-    
 
     <h3>Lip Gloss Mini Size</h3>
 
@@ -491,7 +539,8 @@ selectedShade,
         <span class="currency">EGP</span>
         <span class="amount">50</span>
     </div>
-<!-- Shades -->
+
+    <!-- Shades -->
     <div class="shade-selector">
 
         <div class="shade-option active"
@@ -521,31 +570,37 @@ selectedShade,
             </span>
 
         </div>
+
         <div class="shade-option"
-     data-shade="Pink"
-     data-image="images/lipglosrosepinkswatch.jpeg"
-     onclick="selectShade(this)">
+             data-shade="Pink"
+             data-image="images/lipglosrosepinkswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-color" style="background:#ff82b2;"></span>
-    <span class="shade-name">Pink</span>
+            <span class="shade-color"
+                  style="background:#ff82b2;"></span>
 
-</div>
+            <span class="shade-name">
+                Pink
+            </span>
 
-<div class="shade-option"
-     data-shade="Hot Red"
-     data-image="images/lipglosshotredswatch.jpeg"
-     onclick="selectShade(this)">
+        </div>
 
-    <span class="shade-color"
-          style="background:#d80000;border:1px solid #ccc;"></span>
+        <div class="shade-option"
+             data-shade="Hot Red"
+             data-image="images/lipglosshotredswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-name">Hot Red</span>
+            <span class="shade-color"
+                  style="background:#d80000;border:1px solid #ccc;"></span>
 
-</div>
+            <span class="shade-name">
+                Hot Red
+            </span>
 
-
+        </div>
 
     </div>
+
     <div class="quantity-box">
 
         <button onclick="decrease(this)">-</button>
@@ -559,44 +614,51 @@ selectedShade,
     <button
         class="cart-btn"
         onclick="addToCart(
-    'Lip Gloss Mini Size',
-    'images/lipglossminisize.jpeg',
-    50,
-    this,
-    selectedShade,
-    selectedShadeImage
+        'Lip Gloss Mini Size',
+        'images/lipglossminisize.jpeg',
+        50,
+        this,
+        selectedShade,
+        selectedShadeImage
         )">
 
         Add To Cart 🛒
 
-    </button><button
-class="wishlist-btn"
-data-name="Lip Gloss Mini Size"
-onclick="toggleWishlist(
-'Lip Gloss Mini Size',
-'images/lipglossminisize.jpeg',
-50,
-this,
-selectedShade,
-    selectedShadeImage
-)"><i class="fa-regular fa-heart"></i>
+    </button>
 
-</button>
+    <button
+        class="wishlist-btn"
+        data-name="Lip Gloss Mini Size"
+        onclick="toggleWishlist(
+        'Lip Gloss Mini Size',
+        'images/lipglossminisize.jpeg',
+        50,
+        this,
+        selectedShade,
+        selectedShadeImage
+        )">
 
-</div><!-- Lip Gloss Squeezy Tube -->
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
+</div>
+
+
+<!-- Lip Gloss Squeezy Tube -->
 
 <div class="product-card">
 
-<img src="images/lipglosssquiestube.jpeg" onclick="openProduct(
-'Lip Gloss Squeezy Tube',
-'images/lipglosssquiestube.jpeg',
-'70',
-'Smooth glossy finish with easy application.'
-)">
+    <img
+    src="images/lipglosssquiestube.jpeg"
+    onclick="openProduct(
+    'Lip Gloss Squeezy Tube',
+    'images/lipglosssquiestube.jpeg',
+    '70',
+    'Smooth glossy finish with easy application.'
+    )">
 
     <span class="price-tag">70 EGP</span>
-
-    
 
     <h3>Lip Gloss Squeezy Tube</h3>
 
@@ -606,7 +668,8 @@ selectedShade,
         <span class="currency">EGP</span>
         <span class="amount">70</span>
     </div>
-<!-- Shades -->
+
+    <!-- Shades -->
     <div class="shade-selector">
 
         <div class="shade-option active"
@@ -636,31 +699,37 @@ selectedShade,
             </span>
 
         </div>
+
         <div class="shade-option"
-     data-shade="Pink"
-     data-image="images/lipglosrosepinkswatch.jpeg"
-     onclick="selectShade(this)">
+             data-shade="Pink"
+             data-image="images/lipglosrosepinkswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-color" style="background:#ff82b2;"></span>
-    <span class="shade-name">Pink</span>
+            <span class="shade-color"
+                  style="background:#ff82b2;"></span>
 
-</div>
+            <span class="shade-name">
+                Pink
+            </span>
 
-<div class="shade-option"
-     data-shade="Hot Red"
-     data-image="images/lipglosshotredswatch.jpeg"
-     onclick="selectShade(this)">
+        </div>
 
-    <span class="shade-color"
-          style="background:#d80000;border:1px solid #ccc;"></span>
+        <div class="shade-option"
+             data-shade="Hot Red"
+             data-image="images/lipglosshotredswatch.jpeg"
+             onclick="selectShade(this)">
 
-    <span class="shade-name">Hot Red</span>
+            <span class="shade-color"
+                  style="background:#d80000;border:1px solid #ccc;"></span>
 
-</div>
+            <span class="shade-name">
+                Hot Red
+            </span>
 
-
+        </div>
 
     </div>
+
     <div class="quantity-box">
 
         <button onclick="decrease(this)">-</button>
@@ -673,44 +742,52 @@ selectedShade,
 
     <button
         class="cart-btn"
-       onclick="addToCart(
-    'Lip Gloss Squeezy Tube',
-    'images/lipglosssquiestube.jpeg',
-    70,
-    this,
-    selectedShade,
-    selectedShadeImage
-       )">
+        onclick="addToCart(
+        'Lip Gloss Squeezy Tube',
+        'images/lipglosssquiestube.jpeg',
+        70,
+        this,
+        selectedShade,
+        selectedShadeImage
+        )">
 
         Add To Cart 🛒
 
     </button>
-<button class="wishlist-btn" data-name="Lip Gloss Squeezy Tube" onclick="toggleWishlist(
-    'Lip Gloss Squeezy Tube',
-    'images/lipglosssquiestube.jpeg',
-    70,
-    this,
-    selectedShade,
-    selectedShadeImage
-)">
-    <i class="fa-regular fa-heart"></i>
-</button>
+
+    <button
+        class="wishlist-btn"
+        data-name="Lip Gloss Squeezy Tube"
+        onclick="toggleWishlist(
+        'Lip Gloss Squeezy Tube',
+        'images/lipglosssquiestube.jpeg',
+        70,
+        this,
+        selectedShade,
+        selectedShadeImage
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
+
 </div>
+
 
 <!-- Lip Kit -->
 
 <div class="product-card">
 
-<img src="images/lipglossminibox.jpeg" onclick="openProduct(
-'Lip Kit',
-'images/lipglossminibox.jpeg',
-'200',
-'5 gorgeous shades in one set.'
-)">
+    <img
+    src="images/lipglossminibox.jpeg"
+    onclick="openProduct(
+    'Lip Kit',
+    'images/lipglossminibox.jpeg',
+    '200',
+    '5 gorgeous shades in one set.'
+    )">
 
     <span class="price-tag">200 EGP</span>
-
-    
 
     <h3>Lip Kit</h3>
 
@@ -724,8 +801,6 @@ selectedShade,
 
     </div>
 
-    
-
     <div class="quantity-box">
 
         <button onclick="decrease(this)">-</button>
@@ -737,57 +812,70 @@ selectedShade,
     </div>
 
     <button
-    class="cart-btn"
-    onclick="addToCart(
+        class="cart-btn"
+        onclick="addToCart(
         'Lip Kit',
         'images/lipglossminibox.jpeg',
         200,
         this
-    )">
+        )">
 
-    Add To Cart 🛒
+        Add To Cart 🛒
 
-</button><button
-class="wishlist-btn"
-data-name="Lip gloss Mini Box"
-onclick="toggleWishlist(
-'Lip gloss Mini Box',
-'images/lipglossminibox.jpeg',
-200,
-this
-)"><i class="fa-regular fa-heart"></i>
-    
+    </button>
+
+    <button
+        class="wishlist-btn"
+        data-name="Lip gloss Mini Box"
+        onclick="toggleWishlist(
+        'Lip gloss Mini Box',
+        'images/lipglossminibox.jpeg',
+        200,
+        this
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
 
 </div>
 
 
 <!-- Eyebrow Gel -->
+
 <div class="product-card">
 
-<img src="images/eyebrow.jpeg" onclick="openProduct(
-'Eyebrow Gel',
-'images/eyebrow.jpeg',
-'80',
-'Long-lasting hold for perfect brows.'
-)">
+    <img
+    src="images/eyebrow.jpeg"
+    onclick="openProduct(
+    'Eyebrow Gel',
+    'images/eyebrow.jpeg',
+    '80',
+    'Long-lasting hold for perfect brows.'
+    )">
 
     <span class="price-tag">80 EGP</span>
-
-    
 
     <h3>Eyebrow Gel</h3>
 
     <p>Long Lasting Hold</p>
 
     <div class="product-price">
+
         <span class="currency">EGP</span>
+
         <span class="amount">80</span>
+
     </div>
 
     <div class="quantity-box">
+
         <button onclick="decrease(this)">-</button>
+
         <span class="qty">1</span>
+
         <button onclick="increase(this)">+</button>
+
     </div>
 
     <button
@@ -801,47 +889,60 @@ this
 
         Add To Cart 🛒
 
-    </button><button
-class="wishlist-btn"
-data-name="Eyebrow Gel"
-onclick="toggleWishlist(
-'Eyebrow Gel',
-'images/eyebrow.jpeg',
-80,
-this
-)"><i class="fa-regular fa-heart"></i>
-</button>
+    </button>
+
+    <button
+        class="wishlist-btn"
+        data-name="Eyebrow Gel"
+        onclick="toggleWishlist(
+        'Eyebrow Gel',
+        'images/eyebrow.jpeg',
+        80,
+        this
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
 
 </div>
 
 
 <!-- Lip Scrub -->
+
 <div class="product-card">
 
-<img src="images/lipscrub.jpeg" onclick="openProduct(
-'Lip Scrub',
-'images/lipscrub.jpeg',
-'40',
-'Gently exfoliates for softer lips.'
-)">
+    <img
+    src="images/lipscrub.jpeg"
+    onclick="openProduct(
+    'Lip Scrub',
+    'images/lipscrub.jpeg',
+    '40',
+    'Gently exfoliates for softer lips.'
+    )">
 
     <span class="price-tag">40 EGP</span>
-
-    
 
     <h3>Lip Scrub</h3>
 
     <p>Smooth Lips</p>
 
     <div class="product-price">
+
         <span class="currency">EGP</span>
+
         <span class="amount">40</span>
+
     </div>
 
     <div class="quantity-box">
+
         <button onclick="decrease(this)">-</button>
+
         <span class="qty">1</span>
+
         <button onclick="increase(this)">+</button>
+
     </div>
 
     <button
@@ -855,59 +956,150 @@ this
 
         Add To Cart 🛒
 
-    </button><button
+    </button>
 
-class="wishlist-btn"
+    <button
+        class="wishlist-btn"
+        data-name="Liquid Scrub"
+        onclick="toggleWishlist(
+        'Liquid Scrub',
+        'images/lipscrub.jpeg',
+        40,
+        this
+        )">
 
-data-name="Liquid Scrub"
+        <i class="fa-regular fa-heart"></i>
 
-onclick="toggleWishlist(
+    </button>
 
-'Liquid Scrub',
-
-'images/lipscrub.jpeg',
-
-40,
-
-this
-
-)">
-
-    <i class="fa-regular fa-heart"></i>
-
-</button>
-    
 </div>
 
 
 <!-- Liquid Tint -->
+
 <div class="product-card">
 
-<img src="images/liquidtint.jpeg" onclick="openProduct(
-'Liquid Tint',
-'images/liquidtint.jpeg',
-'70',
-'Natural colour with long-lasting wear.'
-)">
+    <img
+        src="images/liquidtint.jpeg"
+        onclick="openProduct(
+        'Liquid Tint',
+        'images/liquidtint.jpeg',
+        '70',
+        'Natural colour with long-lasting wear.'
+        )">
 
     <span class="price-tag">70 EGP</span>
-
-    
 
     <h3>Liquid Tint</h3>
 
     <p>Natural Tint</p>
 
     <div class="product-price">
+
         <span class="currency">EGP</span>
+
         <span class="amount">70</span>
+
     </div>
 
-    <div class="quantity-box">
-        <button onclick="decrease(this)">-</button>
-        <span class="qty">1</span>
-        <button onclick="increase(this)">+</button>
+
+    <!-- Liquid Tint Shades -->
+    <div class="shade-selector">
+
+        <div
+            class="shade-option active"
+            data-shade="Cherry"
+            data-image="images/lipgloscherryswatch.jpeg"
+            onclick="selectShade(this)">
+
+            <span
+                class="shade-color"
+                style="background:#d63b5c;">
+            </span>
+
+            <span class="shade-name">
+                Cherry
+            </span>
+
+        </div>
+
+
+        <div
+            class="shade-option"
+            data-shade="Nude"
+            data-image="images/lipglosnudeswatch.jpeg"
+            onclick="selectShade(this)">
+
+            <span
+                class="shade-color"
+                style="background:#c98b71;">
+            </span>
+
+            <span class="shade-name">
+                Nude
+            </span>
+
+        </div>
+
+
+        <div
+            class="shade-option"
+            data-shade="Pink"
+            data-image="images/lipglosrosepinkswatch.jpeg"
+            onclick="selectShade(this)">
+
+            <span
+                class="shade-color"
+                style="background:#ff82b2;">
+            </span>
+
+            <span class="shade-name">
+                Pink
+            </span>
+
+        </div>
+
+
+        <div
+            class="shade-option"
+            data-shade="Hot Red"
+            data-image="images/lipglosshotredswatch.jpeg"
+            onclick="selectShade(this)">
+
+            <span
+                class="shade-color"
+                style="background:#d80000;border:1px solid #ccc;">
+            </span>
+
+            <span class="shade-name">
+                Hot Red
+            </span>
+
+        </div>
+
     </div>
+
+
+    <!-- Quantity -->
+
+    <div class="quantity-box">
+
+        <button onclick="decrease(this)">
+            -
+        </button>
+
+        <span class="qty">
+            1
+        </span>
+
+        <button onclick="increase(this)">
+            +
+        </button>
+
+    </div>
+
+
+    <!-- Add To Cart -->
 
     <button
         class="cart-btn"
@@ -915,108 +1107,145 @@ this
         'Liquid Tint',
         'images/liquidtint.jpeg',
         70,
-        this
+        this,
+        selectedShade,
+        selectedShadeImage
         )">
 
         Add To Cart 🛒
 
-    </button><button
-class="wishlist-btn"
-data-name="Liquid Tint"
-onclick="toggleWishlist(
-'Liquid Tint',
-'images/liquidtint.jpeg',
-70,
-this
-)">
-    <i class="fa-regular fa-heart"></i>
-</button>   
+    </button>
+
+
+    <!-- Wishlist -->
+
+    <button
+        class="wishlist-btn"
+        data-name="Liquid Tint"
+        onclick="toggleWishlist(
+        'Liquid Tint',
+        'images/liquidtint.jpeg',
+        70,
+        this,
+        selectedShade,
+        selectedShadeImage
+        )">
+
+        <i class="fa-regular fa-heart"></i>
+
+    </button>
 
 </div>
+
+
 </div>
+
 </section>
+
 <footer>
 
-    <img src="images/logo.png">
 
-    <p class="footer-love">
-        Made with love ✨ <span class="heart">❤</span>
-    </p>
+<img src="images/logo.png">
 
-    <div class="socials">
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-        <a href="https://www.instagram.com/eb_glossy/"
-           target="_blank"
-           rel="noopener noreferrer">
+<p class="footer-love">
+    Made with love ✨ <span class="heart">❤</span>
+</p>
 
-            <i class="fab fa-instagram"></i>
+<div class="socials">
 
-        </a>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <a href="https://www.facebook.com/share/g/1BrcmSiZV8/"
-           target="_blank"
-           rel="noopener noreferrer">
+    <a href="https://www.instagram.com/eb_glossy/"
+       target="_blank"
+       rel="noopener noreferrer">
 
-            <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
 
-        </a>
+    </a>
 
-        <a href="https://wa.me/201068909087"
-           target="_blank"
-           rel="noopener noreferrer">
+    <a href="https://www.facebook.com/share/g/1BrcmSiZV8/"
+       target="_blank"
+       rel="noopener noreferrer">
 
-            <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-facebook-f"></i>
 
-        </a>
+    </a>
 
-    </div>
+    <a href="https://wa.me/201068909087"
+       target="_blank"
+       rel="noopener noreferrer">
 
-    <p class="copyright">
+        <i class="fab fa-whatsapp"></i>
 
-        © 2026 E&B Glossy
+    </a>
 
-    </p>
+</div>
+
+<p class="copyright">
+
+    © 2026 E&B Glossy
+
+</p>
+
+
 <!-- ================= PRODUCT POPUP ================= -->
 
 <div id="product-popup" class="product-popup">
 
-    <div class="popup-box">-
+    <div class="popup-box">
 
         <button
-        class="close-popup"
-        onclick="closeProduct()">
+            class="close-popup"
+            onclick="closeProduct()">
 
             <i class="fa-solid fa-xmark"></i>
 
         </button>
 
+
         <div class="popup-image">
 
-    <img
-    id="popup-image"
-    src=""
-    alt="Product">
+            <img
+                id="popup-image"
+                src=""
+                alt="Product">
 
-    <div
-    id="popup-gloss-gallery"
+
+            <div
+                id="popup-gloss-gallery"
+                style="display:none;">
+
+            </div>
+
+
+            <div
+                id="lipkit-swatches"
+                class="lipkit-swatches"
+                style="display:none;">
+
+                <img
+                    src="images/lipglossminiboxswatches.jpeg"
+                    alt="Lip Kit Swatches">
+
+            </div>
+
+
+            <!-- Liquid Tint Shades inside Quick View -->
+
+<div
+    id="liquidtint-swatches"
+    class="liquidtint-swatches"
     style="display:none;">
 
-    </div>
-    <div id="lipkit-swatches" class="lipkit-swatches" style="display:none;">
-
-    <img
-        src="images/lipglossminiboxswatches.jpeg"
-        alt="Lip Kit Swatches">
-
-</div>
-<div id="liquidtint-swatches" class="liquidtint-swatches" style="display:none;">
     <img
         src="images/tintswatches.jpeg"
         alt="Liquid Tint Shades">
-</div>
 
 </div>
+
+        </div>
+
 
         <div class="popup-info">
 
@@ -1037,43 +1266,61 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 0 EGP
 
             </h3>
-           <div id="variant-box" class="variant-box">
 
-    <p class="variant-title">
-        Choose Scent
-    </p>
 
-    <div class="popup-variant-gallery">
+            <div
+                id="variant-box"
+                class="variant-box">
 
-    <div class="popup-thumb-box">
+                <p class="variant-title">
+                    Choose Scent
+                </p>
 
-        <img
-            src="images/bodysplashmuskvanilla.jpeg"
-            class="popup-thumb active"
-            onclick="changeVariant(
-            'Musk Vanilla',
-            'images/bodysplashmuskvanilla.jpeg',
-            'Fresh vanilla fragrance for a delightful experience.',
-            this
-            )">
 
-        <span>Musk Vanilla</span>
+                <div class="popup-variant-gallery">
 
-    </div>
+                    <div class="popup-thumb-box">
 
-    <div class="popup-thumb-box">
+                        <img
+                            src="images/bodysplashmuskvanilla.jpeg"
+                            class="popup-thumb active"
+                            onclick="changeVariant(
+                            'Musk Vanilla',
+                            'images/bodysplashmuskvanilla.jpeg',
+                            'Fresh vanilla fragrance for a delightful experience.',
+                            this
+                            )">
 
-        <img
-            src="images/bodysplashsweetcandy.jpeg"
-            class="popup-thumb"
-            onclick="changeVariant(
-            'Sweet Candy',
-            'images/bodysplashsweetcandy.jpeg',
-            'Sweet candy fragrance with a playful touch.',
-            this
-            )">
+                        <span>
+                            Musk Vanilla
+                        </span>
 
-        <span>Sweet Candy</span>
+                    </div>
+
+
+                    <div class="popup-thumb-box">
+
+                        <img
+                            src="images/bodysplashsweetcandy.jpeg"
+                            class="popup-thumb"
+                            onclick="changeVariant(
+                            'Sweet Candy',
+                            'images/bodysplashsweetcandy.jpeg',
+                            'Sweet candy fragrance with a playful touch.',
+                            this
+                            )">
+
+                        <span>
+                            Sweet Candy
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -1082,24 +1329,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </footer>
 
+<!-- FLOATING WHATSAPP -->
+
+<a
+ class="whatsapp"
+ href="https://wa.me/201068909087">
 
 
-    <!-- FLOATING WHATSAPP -->
-
-    <a class="whatsapp"
-        href="https://wa.me/201068909087">
-
-        <i class="fab fa-whatsapp"></i>
-
-    </a>
+<i class="fab fa-whatsapp"></i>
 
 
-
-
+</a>
 
 <div id="toast">
 
 </div>
+
 <script src="Script.js"></script>
 
 </body>
