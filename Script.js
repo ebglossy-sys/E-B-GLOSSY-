@@ -1452,7 +1452,10 @@
                 "images/lipglosrosepinkswatch.jpeg",
 
             "Hot Red":
-                "images/lipglosshotredswatch.jpeg"
+                "images/lipglosshotredswatch.jpeg",
+
+            "Peach":
+                "images/tintpeachswatch.jpeg"
 
         
 

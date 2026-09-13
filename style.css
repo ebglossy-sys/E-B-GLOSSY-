@@ -1325,8 +1325,8 @@ nav a:hover::after{
     position:relative;
     overflow:hidden;
 }.wishlist-btn{
-    position:absolute;
-    bottom:210px;
+    
+    bottom:650px;
     right:20px;
     width:40px;
     height:40px;
