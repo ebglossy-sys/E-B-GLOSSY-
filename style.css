@@ -3397,6 +3397,42 @@ nav a{
     width:88%;
     max-width:1150px;
     max-height:740px;
+    
+/* ================= MOBILE OPTIMIZATION FOR LIQUID TINT POPUP ================= */
+    @media (max-width: 600px) {
+    .liquidtint-popup {
+        width: 92% !important;
+        max-height: 85vh !important;
+        padding: 15px !important;
+        overflow-y: auto !important;
+    }
+
+    .liquidtint-popup .popup-image {
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .liquidtint-popup #popup-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 160px !important;
+        object-fit: cover !important;
+    }
+
+    .liquidtint-swatches {
+        margin-top: 10px !important;
+    }
+
+    .liquidtint-swatches img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 150px !important;
+        object-fit: cover !important;
+        border-radius: 12px !important;
+    }
+}
 }/* ============================= */
 /* CREATE YOUR OWN BOX */
 /* ============================= */
