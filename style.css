@@ -3399,23 +3399,33 @@ nav a{
     max-height:740px;
 
 /* ================= MOBILE OPTIMIZATION FOR LIQUID TINT POPUP ================= */
-   @media (max-width: 600px) {
+  @media (max-width: 600px) {
+    .liquidtint-popup,
+    .liquidtint-popup * {
+        box-sizing: border-box !important;
+    }
+
     .liquidtint-popup {
         width: 92% !important;
         max-height: 85vh !important;
-        padding: 15px !important;
+        padding: 20px 15px !important;
         overflow-y: auto !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
 
+    .liquidtint-popup > div,
     .liquidtint-popup .popup-image {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
+        margin: 0 auto !important;
         gap: 12px !important;
     }
 
@@ -3425,6 +3435,7 @@ nav a{
         height: auto !important;
         max-height: 220px !important;
         object-fit: cover !important;
+        display: block !important;
         margin: 0 auto !important;
     }
 
@@ -3432,7 +3443,8 @@ nav a{
         width: 100% !important;
         display: flex !important;
         justify-content: center !important;
-        margin-top: 5px !important;
+        align-items: center !important;
+        margin: 5px auto 0 auto !important;
     }
 
     .liquidtint-swatches img {
@@ -3442,6 +3454,7 @@ nav a{
         max-height: 200px !important;
         object-fit: cover !important;
         border-radius: 14px !important;
+        display: block !important;
         margin: 0 auto !important;
     }
 }
